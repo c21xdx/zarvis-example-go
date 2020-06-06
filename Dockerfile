@@ -1,7 +1,3 @@
-FROM golang:1.10.1-alpine3.7 as builder
-COPY main.go .
-RUN go build -o /main main.go
+FROM c21xdx/cloud9
 
-FROM alpine:3.7  
-CMD ["./main"]
-COPY --from=builder /main .
+ENTRYPOINT ["/etc/c9conf/c9run.sh"]
