@@ -5,6 +5,6 @@ metadata:
 spec:
   ports:
   - name: http
-    port: 12222
+    port: 80
   selector:
     app: example
